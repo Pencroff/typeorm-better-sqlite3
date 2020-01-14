@@ -1,0 +1,41 @@
+{
+  "name": "@pencroff/typeorm-better-sqlite3",
+  "version": "1.0.0",
+  "description": "better-sqlite3 driver for typeorm",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "docs": "rimraf ./docs && typedoc && npm run copyAssets",
+    "copyAssets": "copyfiles CNAME docs && copyfiles assets/**/*.{svg,png} docs/assets"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pencroff/typeorm-better-sqlite3.git"
+  },
+  "keywords": [
+    "typeorm"
+  ],
+  "author": "@Pencroff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pencroff/typeorm-better-sqlite3/issues"
+  },
+  "homepage": "https://github.com/Pencroff/typeorm-better-sqlite3#readme",
+  "peerDependencies": {
+    "typeorm": "^0.2.22",
+    "better-sqlite3": "^5.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^13.1.6",
+    "better-sqlite3": "^5.4.3",
+    "copyfiles": "^2.1.1",
+    "np": "^4.0.2",
+    "rimraf": "^3.0.0",
+    "typedoc": "^0.16.2",
+    "typeorm": "^0.2.22",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "tslib": "^1.10.0"
+  }
+}
