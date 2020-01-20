@@ -7,11 +7,13 @@ It's 10x or even 18x faster for some cases - [link](https://github.com/JoshuaWis
 ## Usage
 
 ```
+import { Connection, createConnection } from 'typeorm';
 import { OrmService } from '@pencroff/typeorm-better-sqlite3/dist';
 
 async function run() {
     const orm = new OrmService();
-    await orm.initConnection();
+    const con = await createConnection();
+    await orm.useConnection(con);
     const repo = orm.getRepo(SomeModel);
     const result: SomeModel[] = await repo.find({
       where: {

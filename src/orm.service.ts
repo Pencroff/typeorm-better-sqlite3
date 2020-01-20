@@ -14,8 +14,7 @@ export class OrmService {
   /**
    * Initialize connection and replace default SQLite driver (sqlite3) to better-sqlite3
    */
-  async initConnection() {
-    let con = await createConnection();
+  async useConnection(con: Connection) {
     con = await this.updateDriver(con);
     this.con = con;
     return con;
