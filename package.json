@@ -1,6 +1,6 @@
 {
   "name": "@pencroff/typeorm-better-sqlite3",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "better-sqlite3 driver for typeorm",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
