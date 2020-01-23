@@ -1,0 +1,18 @@
+{
+    "type": "sqlite",
+    "database": "db-data/local.db",
+    "--logging": true,
+    "entities": [
+        "entity/**/*.ts"
+    ],
+    "migrations": [
+        "migration/**/*.ts"
+    ],
+    "subscribers": [
+        "subscriber/**/*.ts"
+    ],
+    "cli": {
+        "entitiesDir": "entity",
+        "migrationsDir": "migration"
+    }
+}

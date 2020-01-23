@@ -8,7 +8,7 @@ It's 10x or even 18x faster for some cases - [link](https://github.com/JoshuaWis
 
 ```
 import { Connection, createConnection } from 'typeorm';
-import { OrmService } from '@pencroff/typeorm-better-sqlite3/dist';
+import { OrmService } from '@pencroff/typeorm-better-sqlite3';
 
 async function run() {
     const orm = new OrmService();
@@ -25,9 +25,12 @@ async function run() {
 
 ```
 
-## Instalation
+for more details please check `example` folder
+
+## Instalation notes
 
 It requires building tools and Python 2 (should be >=2.6.0 <3.0.0).
 
 Python 2 can be used from folder "C:\Python27\python.exe"
 
+Make sure - `sqlite3` package required for migrations
