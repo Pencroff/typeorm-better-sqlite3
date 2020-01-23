@@ -30,7 +30,7 @@
     "better-sqlite3": "^5.4.3"
   },
   "devDependencies": {
-    "@types/node": "^13.1.6",
+    "@types/node": "^10.17.13",
     "better-sqlite3": "^5.4.3",
     "copyfiles": "^2.1.1",
     "np": "^4.0.2",

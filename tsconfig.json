@@ -17,7 +17,7 @@
     "mode": "file",
     "out": "docs",
     "hideGenerator": true,
-    "___gaID": "UA-155361709-1"
+    "gaID": "UA-155361709-2"
   },
   "include": [
     "src/**/*"

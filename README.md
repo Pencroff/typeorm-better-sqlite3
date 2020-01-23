@@ -25,7 +25,7 @@ async function run() {
 
 ```
 
-for more details please check `example` folder
+for more details please check **[example](https://github.com/Pencroff/typeorm-better-sqlite3/tree/master/example)** folder
 
 ## Instalation notes
 
