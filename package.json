@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/Pencroff/typeorm-better-sqlite3/issues"
   },
-  "homepage": "https://github.com/Pencroff/typeorm-better-sqlite3#readme",
+  "homepage": "https://typeorm-better-sqlite3.pencroff.com",
   "peerDependencies": {
     "typeorm": "^0.2.22",
     "better-sqlite3": "^5.4.3"

@@ -1,5 +1,7 @@
 # typeorm-better-sqlite3
 
+[Github](https://github.com/Pencroff/typeorm-better-sqlite3)
+
 Performant [better-sqlite3](https://github.com/JoshuaWise/better-sqlite3) driver for [Typeorm](https://typeorm.io/#/).
 
 It's 10x or even 18x faster for some cases - [link](https://github.com/JoshuaWise/better-sqlite3#how-other-libraries-compare)
