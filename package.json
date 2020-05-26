@@ -30,10 +30,6 @@
     "url": "https://github.com/Pencroff/typeorm-better-sqlite3/issues"
   },
   "homepage": "https://typeorm-better-sqlite3.pencroff.com",
-  "peerDependencies": {
-    "typeorm": "^0.2.25",
-    "better-sqlite3": "^7.0.1"
-  },
   "devDependencies": {
     "@types/node": "^14.0.5",
     "better-sqlite3": "^7.0.1",
@@ -43,10 +39,11 @@
     "sqlite3": "^4.2.0",
     "ts-node": "^8.10.1",
     "typedoc": "^0.17.7",
-    "typeorm": "^0.2.25",
     "typescript": "^3.9.3"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "typeorm": "^0.2.25",
+    "better-sqlite3": "^7.0.1"
   }
 }
