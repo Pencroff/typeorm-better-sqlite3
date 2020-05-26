@@ -1,5 +1,6 @@
 import { createConnection } from 'typeorm';
-import { OrmService } from '@pencroff/typeorm-better-sqlite3';
+import { OrmService } from '@pencroff/typeorm-better-sqlite3'; // correct import
+// import { OrmService } from '../src'; // local import
 import { UserModel } from './entity/UserModel';
 
 async function run() {
@@ -19,6 +20,7 @@ async function run() {
     },
   });
   console.log('result', result); // result [ UserModel { id: 'id-1', name: 'Wood', age: 10 } ]
+  return true;
 }
 
 run();

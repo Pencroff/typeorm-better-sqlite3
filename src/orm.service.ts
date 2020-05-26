@@ -1,7 +1,7 @@
 /**
  * @module typeorm-better-sqlite3
  */
-import { Connection, createConnection, Driver, EntitySchema, ObjectType, Repository } from 'typeorm';
+import { Connection, Driver, EntitySchema, ObjectType, Repository } from 'typeorm';
 import { BetterSqliteDriver } from './better-sqlite-driver';
 
 /**
@@ -38,12 +38,12 @@ export class OrmService {
   }
 
   /**
-   * Make DB WAL mode checkpoint - [link](https://github.com/JoshuaWise/better-sqlite3/blob/master/docs/api.md#checkpointdatabasename---this)
+   * Make DB WAL mode checkpoint - [link](https://github.com/JoshuaWise/better-sqlite3/blob/master/docs/performance.md#checkpoint-starvation)
    */
   dbCheckpoint() {
     const db = (this.con.driver as BetterSqliteDriver).databaseConnection;
-    if (db.checkpoint) {
-      db.checkpoint();
+    if (db.pragma) {
+      db.pragma('wal_checkpoint(RESTART)');
     }
   }
 
