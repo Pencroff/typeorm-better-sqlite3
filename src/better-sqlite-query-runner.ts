@@ -2,11 +2,12 @@
  * @module typeorm-better-sqlite3
  */
 
-import { AbstractSqliteQueryRunner } from 'typeorm/driver/sqlite-abstract/AbstractSqliteQueryRunner';
-import { BetterSqliteDriver } from './better-sqlite-driver';
+
 import { Broadcaster } from 'typeorm/subscriber/Broadcaster';
 import { QueryRunnerAlreadyReleasedError } from 'typeorm/error/QueryRunnerAlreadyReleasedError';
 import { QueryFailedError } from 'typeorm';
+import { AbstractSqliteQueryRunner } from 'typeorm/driver/sqlite-abstract/AbstractSqliteQueryRunner';
+import { AbstractSqliteDriver } from 'typeorm/driver/sqlite-abstract/AbstractSqliteDriver';
 
 /**
  * Runs queries on a single sqlite database connection.
@@ -20,13 +21,13 @@ export class BetterSqliteQueryRunner extends AbstractSqliteQueryRunner {
   /**
    * Database driver used by connection.
    */
-  driver: BetterSqliteDriver;
+  driver: AbstractSqliteDriver;
 
   // -------------------------------------------------------------------------
   // Constructor
   // -------------------------------------------------------------------------
 
-  constructor(driver: BetterSqliteDriver) {
+  constructor(driver: AbstractSqliteDriver) {
     super();
     this.driver = driver;
     this.connection = driver.connection;

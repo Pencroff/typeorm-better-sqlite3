@@ -4,14 +4,28 @@
     "declarationDir": "./dist",
     "downlevelIteration": true,
     "module": "commonjs",
-    "noImplicitAny": true,
-    "lib": ["es2017", "es7", "es6", "dom"],
+    "moduleResolution": "node",
+    "target": "es2017",
+    "lib": ["es2017", "es2016", "es2015", "dom"],
     "rootDir": "./src",
     "outDir": "./dist",
-    "target": "es5",
-    "moduleResolution": "node",
     "sourceMap": true,
-    "importHelpers": true
+    "allowJs": false,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "resolveJsonModule": true,
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "node_modules/@types",
+      "types"
+    ]
   },
   "typedocOptions": {
     "mode": "file",

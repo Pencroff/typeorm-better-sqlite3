@@ -10,6 +10,7 @@ import { BetterSqliteQueryRunner } from './better-sqlite-query-runner';
 import { PlatformTools } from 'typeorm/platform/PlatformTools';
 import { DriverPackageNotInstalledError } from 'typeorm/error/DriverPackageNotInstalledError';
 
+
 /**
  * Organizes communication with sqlite DBMS.
  */
@@ -142,11 +143,9 @@ export class BetterSqliteDriver extends AbstractSqliteDriver {
    * Auto creates database directory if it does not exist.
    */
   protected createDatabaseDirectory(fullPath: string): Promise<void> {
-    return new Promise<void>((resolve, reject) => {
-      const mkdirp = PlatformTools.load('mkdirp');
-      const path = PlatformTools.load('path');
-      mkdirp(path.dirname(fullPath), (err: any) => err ? reject(err) : resolve());
-    });
+    const mkdirp = PlatformTools.load('mkdirp');
+    const path = PlatformTools.load('path');
+    return mkdirp(path.dirname(fullPath));
   }
 
 }
