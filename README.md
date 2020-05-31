@@ -33,6 +33,23 @@ for more details please check **[example](https://github.com/Pencroff/typeorm-be
 
 It requires building tools and Python 2 (should be >=2.6.0 <3.0.0).
 
-Python 2 can be used from folder "C:\Python27\python.exe"
+Python 2 can be used from folder "C:\Python27\python.exe" (Not required to be in `PATH`)
 
-Make sure - `sqlite3` package required for migrations
+Actually just run as Administrator (if you have any issue with compiling `better-sqlite3`):
+
+```
+npm install --global --production windows-build-tools
+```
+
+More details [here](https://github.com/nodejs/node-gyp#on-windows).
+
+Make sure to have `sqlite3` package in your dev dependency. It requires for migrations.
+
+## Known issues
+
+* Import `createConnection` before `OrmService`. Like below:
+
+```
+import { createConnection } from 'typeorm';
+import { OrmService } from '@pencroff/typeorm-better-sqlite3';
+``` 
