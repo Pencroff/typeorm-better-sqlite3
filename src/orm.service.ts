@@ -3,6 +3,7 @@
  */
 import { Connection, Driver, EntitySchema, ObjectType, Repository } from 'typeorm';
 import { BetterSqliteDriver } from './better-sqlite-driver';
+import deprecated from 'deprecated-decorator';
 
 /**
  * High level abstraction as ORM service around Typeorm better-sqlite3 driver.
@@ -30,10 +31,19 @@ export class OrmService {
   }
 
   /**
-   * Exequite raw sql query and get list of objects with type T
+   * [DEPRECATED] Execute raw sql query and get list of objects with type T
    * @param query
    */
+  @deprecated('execute', '1.1.3')
   getRaw<T>(query: string): Promise<T[]> {
+    return this.con.query(query);
+  }
+
+  /**
+   * Execute raw sql query and get list of objects with type T
+   * @param query
+   */
+  execute<T>(query: string): Promise<T[]> {
     return this.con.query(query);
   }
 
