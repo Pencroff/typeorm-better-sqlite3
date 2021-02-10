@@ -1,4 +1,6 @@
-# typeorm-better-sqlite3
+# [deprecated] typeorm-better-sqlite3
+
+## The Typeorm has build in better-sqlite3 driver - [better-sqlite3 driver](https://typeorm.io/#/connection-options/better-sqlite3-connection-options)
 
 [Github](https://github.com/Pencroff/typeorm-better-sqlite3)
 
