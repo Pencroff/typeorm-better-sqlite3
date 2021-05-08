@@ -16,7 +16,7 @@
   "dependencies": {
     "@pencroff/typeorm-better-sqlite3": "^1.0.2",
     "better-sqlite3": "^7.0.1",
-    "typeorm": "0.2.24"
+    "typeorm": "0.2.25"
   },
   "devDependencies": {
     "@types/node": "^12.12.42",
